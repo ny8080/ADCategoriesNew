@@ -8,14 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ADCategoriesNew'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of ADCategoriesNew.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -26,17 +20,34 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ny8080' => 'hongsang@2dfire.com' }
   s.source           = { :git => 'https://github.com/ny8080/ADCategoriesNew.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ADCategoriesNew/Classes/**/*'
+  s.source_files = 'ADCategoriesNew/Classes/TDFCategories.h'
+  s.resources = "ADCategoriesNew/Assets/**/*.{lproj,png}"
+  s.public_header_files = 'ADCategoriesNew/Classes/TDFCategories.h'
   
-  # s.resource_bundles = {
-  #   'ADCategoriesNew' => ['ADCategoriesNew/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  subspec_hashs = [
+  { spec_name: 'NSBundle', source_files: "Classes/NSBundle/*.{h,m}" }, 
+  #{ spec_name: 'NSString', source_files: "Classes/NSString/*.{h,m}", spec_dependency: ["TDFDataCenterKit"] },
+  { spec_name: 'NSString', source_files: "Classes/NSString/*.{h,m}", },
+  { spec_name: 'UICollectionReusableView', source_files: "Classes/UICollectionReusableView/*.{h,m}" }, 
+  { spec_name: 'UICollectionViewCell', source_files: "Classes/UICollectionViewCell/*.{h,m}" }, 
+  { spec_name: 'UIColor', source_files: "Classes/UIColor/*.{h,m}" }, 
+  { spec_name: 'UIImage', source_files: "Classes/UIImage/*.{h,m}" }, 
+  { spec_name: 'UILabel', source_files: "Classes/UILabel/*.{h,m}" }, 
+  { spec_name: 'UIScrollView', source_files: "Classes/UIScrollView/*.{h,m}" }, 
+  { spec_name: 'UITableViewCell', source_files: "Classes/UITableViewCell/*.{h,m}",spec_dependency: ["Masonry"] }, 
+  { spec_name: 'UITableViewHeaderFooterView', source_files: "Classes/UITableViewHeaderFooterView/*.{h,m}" }, 
+  { spec_name: 'UIView', source_files: "Classes/UIView/*.{h,m}",spec_dependency: ["MBProgressHUD","Masonry"] },
+  { spec_name: 'UIViewController', source_files: "Classes/UIViewController/*.{h,m}" },
+  { spec_name: 'NSMutableArray', source_files: "Classes/NSMutableArray/*.{h,m}" },
+  { spec_name: 'NSDictionay', source_files: "Classes/NSDictionay/*.{h,m}" },
+  { spec_name: 'NSData', source_files: "Classes/NSData/*.{h,m}" },
+  { spec_name: 'UIButton', source_files: "Classes/UIButton/*.{h,m}" }
+  ]
+  
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
