@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		165EB95A3D8B8A0FA76DC91B /* Pods_ADCategoriesNew_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADCategoriesNew_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		249A083A378A435B0DE9F42E /* Pods_ADCategoriesNew_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADCategoriesNew_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A16CA8AA18E0FB1BB1F266 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		41A16CA8AA18E0FB1BB1F266 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		57669280ED04308E074809D4 /* Pods-ADCategoriesNew_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADCategoriesNew_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADCategoriesNew_Example/Pods-ADCategoriesNew_Example.release.xcconfig"; sourceTree = "<group>"; };
 		58A58BB9B44D8D162DF58F78 /* Pods-ADCategoriesNew_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADCategoriesNew_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADCategoriesNew_Tests/Pods-ADCategoriesNew_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ADCategoriesNew_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADCategoriesNew_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,12 +61,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		64B2F8064BBFC506480514DA /* ADCategoriesNew.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ADCategoriesNew.podspec; path = ../ADCategoriesNew.podspec; sourceTree = "<group>"; };
+		64B2F8064BBFC506480514DA /* ADCategoriesNew.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ADCategoriesNew.podspec; path = ../ADCategoriesNew.podspec; sourceTree = "<group>"; };
 		71271E9C1FF381AC674BED3E /* Pods-ADCategoriesNew_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADCategoriesNew_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADCategoriesNew_Example/Pods-ADCategoriesNew_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1A3340FF52BB74F343079A3 /* Pods-ADCategoriesNew_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADCategoriesNew_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADCategoriesNew_Tests/Pods-ADCategoriesNew_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E14CE523BE9605F8A40310B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E14CE523BE9605F8A40310B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,16 +341,13 @@
 		};
 		82C3B47A05386E6CBCE58B0C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ADCategoriesNew_Example/Pods-ADCategoriesNew_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ADCategoriesNew/ADCategoriesNew.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADCategoriesNew.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,18 +371,26 @@
 		};
 		BCD5F093CA7B92A3E0F50283 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ADCategoriesNew_Example/Pods-ADCategoriesNew_Example-resources.sh",
+				"${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_back.png",
+				"${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_cancel.png",
+				"${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_ok.png",
+				"${PODS_ROOT}/../../ADCategoriesNew/Assets/en.lproj",
+				"${PODS_ROOT}/../../ADCategoriesNew/Assets/th.lproj",
+				"${PODS_ROOT}/../../ADCategoriesNew/Assets/zh-Hans.lproj",
+				"${PODS_ROOT}/../../ADCategoriesNew/Assets/zh-Hant.lproj",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADCategoriesNew_Example/Pods-ADCategoriesNew_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		CBDF95793B82355F4341677F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

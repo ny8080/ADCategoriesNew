@@ -83,6 +83,24 @@ EOM
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_back.png"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_cancel.png"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_ok.png"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/en.lproj"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/th.lproj"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/zh-Hans.lproj"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/zh-Hant.lproj"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_back.png"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_cancel.png"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/common_nbc_ok.png"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/en.lproj"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/th.lproj"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/zh-Hans.lproj"
+  install_resource "${PODS_ROOT}/../../ADCategoriesNew/Assets/zh-Hant.lproj"
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
